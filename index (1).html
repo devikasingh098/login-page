@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOVA authentication">
+  <title>NOVA — Authentication</title>
+  <link rel="stylesheet" href="style.css?v=2">
+  <script src="script.js?v=2" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <div class="background-orb orb-purple" aria-hidden="true"></div>
+    <div class="background-orb orb-blue" aria-hidden="true"></div>
+    <div class="background-orb orb-pink" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <section class="auth-card" aria-label="NOVA authentication">
+      <div class="logo" aria-label="NOVA">
+        <span class="logo-mark" aria-hidden="true"><span></span></span>
+        <span class="logo-name">NOVA</span>
+      </div>
+
+      <div class="auth-views">
+        <section class="auth-view is-active" id="login-view" aria-labelledby="login-title">
+          <div class="intro">
+            <h1 id="login-title">Welcome back</h1>
+            <p>Sign in to continue to your account</p>
+          </div>
+
+          <form class="auth-form" action="#" method="post">
+            <div class="field-group">
+              <label for="login-email">Username / Email</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <input id="login-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="login-password">Password</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+              </div>
+            </div>
+
+            <div class="form-options">
+              <label class="remember-me"><input type="checkbox" name="remember"><span class="custom-checkbox" aria-hidden="true"></span><span>Remember me</span></label>
+              <a class="text-link" href="#forgot-password">Forgot password?</a>
+            </div>
+
+            <button class="auth-button" type="submit"><span>Login</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </form>
+
+          <p class="switch-prompt">Don't have an account? <a class="text-link switch-view" href="#signup" data-target="signup-view">Create account</a></p>
+        </section>
+
+        <section class="auth-view" id="signup-view" aria-labelledby="signup-title" aria-hidden="true">
+          <div class="intro signup-intro">
+            <h1 id="signup-title">Create account</h1>
+            <p>Join NOVA and make space for what matters</p>
+          </div>
+
+          <form class="auth-form" action="#" method="post">
+            <div class="field-group">
+              <label for="signup-name">Name / Username</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 19a6.5 6.5 0 0 1 13 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <input id="signup-name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="signup-email">Email address</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <input id="signup-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="signup-password">Password</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <input id="signup-password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" minlength="8" required>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="signup-confirm-password">Confirm password</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <input id="signup-confirm-password" name="confirm-password" type="password" placeholder="Confirm your password" autocomplete="new-password" minlength="8" required>
+              </div>
+            </div>
+
+            <button class="auth-button" type="submit"><span>Create account</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </form>
+
+          <p class="switch-prompt">Already have an account? <a class="text-link switch-view" href="#login" data-target="login-view">Login</a></p>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
